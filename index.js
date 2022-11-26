@@ -9,7 +9,7 @@ app.use(express.json());
 const port = process.env.PORT || 3001;
 
 //Initializing middleware
-app.use(cors({origin: ["http://d3svaf5tl2i38g.cloudfront.net","http://getlooked.com.s3-website-us-east-1.amazonaws.com","http://getlooked.com"],methods: ["GET", "POST", "DELETE"],credentials: true}));
+app.use(cors({origin: ["http://getlooked.com","https://getlooked.com"],methods: ["GET", "POST", "DELETE"],credentials: true}));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 
