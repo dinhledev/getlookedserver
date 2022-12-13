@@ -9,7 +9,7 @@ AWS.config.update({
   accessKeyId: process.env.AWSAccessKeyId,
   secretAccessKey: process.env.AWSSecretKey
 })
-const S3_BUCKET = process.env.Bucket;
+const S3_BUCKET = "getlooked.com.images";
 const REGION ="us-east-1";
 const URL_EXPIRATION_TIME = 60; // in seconds
 
