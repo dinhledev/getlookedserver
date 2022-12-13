@@ -9,10 +9,10 @@ require('dotenv').config();
 //  });
 
  const db = mysql.createConnection({
-    user: process.env.MYSQLUSER, 
-    host: process.env.MYSQLHOST,
-    password: process.env.MYSQLPASSWORD,
-    database: process.env.MYSQLDATABASE
+    user: process.env.MysqlUser, 
+    host: process.env.MysqlHost,
+    password: process.env.MysqlPassword,
+    database: process.env.MysqlDatabase
  });
  console.log(db);
  module.exports = db
