@@ -7,12 +7,16 @@ require('dotenv').config();
 //     password: "Mapiumap1%",
 //     database: "getlookedDB",
 //  });
+const user =  process.env.MysqlUser
+const host =  process.env.MysqlHost
+const password =  process.env.MysqlPassword
+const database =  process.env.MysqlDatabase
 
  const db = mysql.createConnection({
-    user: process.env.MysqlUser, 
-    host: process.env.MysqlHost,
-    password: process.env.MysqlPassword,
-    database: process.env.MysqlDatabase
+    user: process.env.PORT ? user:"root" , 
+    host: process.env.PORT ? host:"localhost",
+    password: process.env.PORT ? password:"12345",
+    database: process.env.PORT ? database:"getlookeddb"
  });
  console.log(db);
  module.exports = db
