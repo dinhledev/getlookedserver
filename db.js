@@ -13,10 +13,10 @@ const password =  process.env.MysqlPassword
 const database =  process.env.MysqlDatabase
 
  const db = mysql.createConnection({
-    user: process.env.PORT ? user:"root" , 
-    host: process.env.PORT ? host:"localhost",
-    password: process.env.PORT ? password:"12345",
-    database: process.env.PORT ? database:"getlookeddb"
+    user: user , 
+    host: host,
+    password: password,
+    database: database
  });
  console.log(db);
  module.exports = db
